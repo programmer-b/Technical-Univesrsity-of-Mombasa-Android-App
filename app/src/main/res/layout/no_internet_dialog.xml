@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_dialog"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText"
+    android:padding="11dp">
+
+    <TextView
+        android:id="@+id/textTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="You have no internet connection."
+        android:textSize="17sp"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_below="@+id/textTittle"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/view"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="cancel"
+            android:textAllCaps="true"
+            android:background="@drawable/neutral_text_bg"
+            android:padding="7dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/turnOnButton"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="turn on"
+            android:textAllCaps="true"
+            android:background="@drawable/positive_text_bg"
+            android:padding="7dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

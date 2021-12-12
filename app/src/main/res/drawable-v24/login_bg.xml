@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/tum_front"/>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#BB097B3E"/>
+        </shape>
+    </item>
+</layer-list>

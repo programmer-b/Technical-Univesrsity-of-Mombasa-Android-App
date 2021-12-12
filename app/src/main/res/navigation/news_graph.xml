@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/NewsView">
+
+    <fragment android:id="@+id/NewsView"
+        android:name="com.tum.app.NewsView"
+        android:label="News"
+        tools:layout="@layout/fragment_news_view">
+
+        <action
+            android:id="@+id/homeToUpload"
+            app:destination="@id/NewsUpload"
+            app:enterAnim="@anim/fui_slide_in_right"
+            app:exitAnim="@anim/fui_slide_out_left"
+            app:popEnterAnim="@anim/fui_slide_out_left"
+            app:popExitAnim="@anim/fui_slide_in_right"/>
+
+        <action
+            android:id="@+id/homeToContent"
+            app:destination="@id/NewsContent"
+            app:enterAnim="@anim/fui_slide_in_right"
+            app:exitAnim="@anim/fui_slide_out_left"
+            app:popEnterAnim="@anim/fui_slide_out_left"
+            app:popExitAnim="@anim/fui_slide_in_right"/>
+
+
+    </fragment>
+
+    <fragment android:id="@+id/NewsUpload"
+        android:name="com.tum.app.NewsUpload"
+        android:label="Upload News"
+        tools:layout="@layout/fragment_news_upload">
+
+        <action
+            android:id="@+id/uploadToHome"
+            app:destination="@id/NewsView"
+            app:popExitAnim="@anim/slide_left"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/NewsContent"
+        android:name="com.tum.app.NewsContent"
+        android:label="label"
+        tools:layout="@layout/fragment_news_content">
+
+        <action
+            android:id="@+id/ContentToHome"
+            app:destination="@id/NewsView"
+            app:popExitAnim="@anim/slide_left"/>
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="HardcodedText"
+    tools:context=".Memos">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Memos will appear here" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="90dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/memos_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eee"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/memo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="70dp"
+            android:paddingEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:hint="Write a memo to your class"
+            android:importantForAutofill="no"/>
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:src="@drawable/send"
+            android:layout_gravity="bottom"
+            android:contentDescription="@string/todo"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

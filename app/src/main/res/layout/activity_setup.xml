@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:ignore="hardcodedText"
+    tools:context=".SetupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="27dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layout_information">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="#ffffffff"
+            android:text="Account Setup"
+            android:gravity="center"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/setup_profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            app:civ_border_overlay="true"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/white"
+            android:src="@drawable/default_profile_image"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginInput"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/white"
+            app:startIconDrawable="@drawable/full_name"
+            android:layout_marginTop="25dp"
+            app:startIconTint="@color/white"
+            app:hintTextColor="@color/white"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full name"
+                android:textCursorDrawable="@null"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:inputType="textCapCharacters"
+                android:textColorHint="#bfffffff"
+                android:textColor="#ffffffff"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginInput"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/white"
+            app:startIconDrawable="@drawable/reg"
+            android:layout_marginTop="18dp"
+            app:startIconTint="@color/white"
+            app:hintTextColor="@color/white"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/registrationNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Registration number"
+                android:textCursorDrawable="@null"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textColorHint="#bfffffff"
+                android:inputType="textCapCharacters" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/LoginInput"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/white"
+            app:startIconDrawable="@drawable/phone"
+            android:layout_marginTop="18dp"
+            app:startIconTint="@color/white"
+            app:hintTextColor="@color/white"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone number"
+                android:textCursorDrawable="@null"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textColorHint="#bfffffff"
+                android:inputType="phone"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_information"
+        android:padding="15dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_account_button"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp"
+            android:text="Save Account"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77000000"
+        android:visibility="gone">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/av"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorName="LineScalePulseOutIndicator"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/av"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Saving account. Please wait ..."
+            android:textColor="#fff"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

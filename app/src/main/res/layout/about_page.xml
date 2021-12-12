@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="17dp"
+    tools:ignore="HardcodedText"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textSize="19sp"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="true"
+            android:text="about."/>
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="19dp"
+            android:fontFamily="monospace"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:layout_below="@id/title"
+            android:text="Technical University of Mombasa Android App was built as a free service to students. This will enable them access portals, news, downloads, etc with ease. \n\n This is schools contact information: \n\n email: info@tum.ac.ke\n\n\t phone: (254)733955377, (254)724955277\n\nP.O BOX. 90420-80100 MSA\n\nTom Mboya Street Tudor,Msa." />
+        <Button
+            android:id="@+id/buttonOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/body"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="ok"/>
+
+    </RelativeLayout>
+
+</ScrollView>

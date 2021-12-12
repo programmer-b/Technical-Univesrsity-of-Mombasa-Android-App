@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="17dp"
+    tools:ignore="HardcodedText"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/privacyIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/privacy"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/todo"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textSize="19sp"
+            android:layout_below="@id/privacyIcon"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="true"
+            android:text="accept terms."/>
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="19dp"
+            android:fontFamily="monospace"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:layout_below="@id/title"
+            android:text="This page is to inform students regarding my policies with the collection, use and disclosure of Personal Information if anyone decided to use my service.\n If you choose to use my service, then you agree to the collection and use of information in relation to this policy.\n The personal information that i collect is used for providing and improving the service. I will not use or share your information with anyone except as described in this privacy policy."/>
+
+        <Button
+            android:id="@+id/buttonOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/body"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="ok"/>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/DownloadsList">
+
+    <fragment android:id="@+id/DownloadsList"
+        android:name="com.tum.app.DownloadsList"
+        android:label="Downloads"
+        tools:layout="@layout/fragment_downloads_list">
+
+        <action
+            android:id="@+id/homeToUpload"
+            app:destination="@id/UploadPdf"
+            app:enterAnim="@anim/fui_slide_in_right"
+            app:exitAnim="@anim/fui_slide_out_left"
+            app:popEnterAnim="@anim/fui_slide_out_left"
+            app:popExitAnim="@anim/fui_slide_in_right"/>
+
+        <action
+            android:id="@+id/homeToContent"
+            app:destination="@id/PdfView"
+            app:enterAnim="@anim/fui_slide_in_right"
+            app:exitAnim="@anim/fui_slide_out_left"
+            app:popEnterAnim="@anim/fui_slide_out_left"
+            app:popExitAnim="@anim/fui_slide_in_right"/>
+
+
+    </fragment>
+
+    <fragment android:id="@+id/UploadPdf"
+        android:name="com.tum.app.upload_doc"
+        android:label="Upload News"
+        tools:layout="@layout/fragment_upload_doc">
+
+        <action
+            android:id="@+id/uploadToHome"
+            app:destination="@id/DownloadsList"
+            app:popExitAnim="@anim/slide_left"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/PdfView"
+        android:name="com.tum.app.PdfView"
+        android:label="label"
+        tools:layout="@layout/fragment_pdf_view">
+
+        <action
+            android:id="@+id/ContentToHome"
+            app:destination="@id/DownloadsList"
+            app:popExitAnim="@anim/slide_left"/>
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText"
+    android:background="#fefefe"
+    tools:context=".PreferencesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/green">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Preferences"
+            app:titleTextColor="@color/white"
+            app:titleCentered="true"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="53dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="5dp"
+                android:layout_margin="7dp"
+                android:background="#fff"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:id="@+id/notificationIcon"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="7dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/notification_icon"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable notifications"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/notificationIcon"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="5dp"
+                android:layout_margin="7dp"
+                android:background="#fff"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:id="@+id/syncIcon"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="7dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/sync_icon"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto sync"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/syncIcon"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sync"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/passwords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="5dp"
+                android:layout_margin="7dp"
+                android:background="#fff"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:id="@+id/passwordsIcon"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="7dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/lock_pass"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/passwordsIcon"
+                    android:text="Passwords" />
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="17dp"
+                    android:contentDescription="arrow"
+                    android:src="@drawable/forward_arrow_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="15dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="5dp"
+                android:layout_margin="7dp"
+                android:background="#fff"
+                android:elevation="8dp">
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="7dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/home_icon"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TUM home"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="7dp"
+                android:layout_toEndOf="@+id/homeIcon"/>
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="17dp"
+                android:contentDescription="arrow"
+                android:src="@drawable/forward_arrow_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="15dp"/>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="5dp"
+                android:layout_margin="7dp"
+                android:background="#fff"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:id="@+id/aboutIcon"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="7dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/more_icon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About TUM app"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/aboutIcon"/>
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="17dp"
+                    android:contentDescription="arrow"
+                    android:src="@drawable/forward_arrow_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="15dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="5dp"
+                android:layout_margin="7dp"
+                android:background="#fff"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:id="@+id/privacyIcon"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="7dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/privacy" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/privacyIcon"/>
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="17dp"
+                    android:contentDescription="arrow"
+                    android:src="@drawable/forward_arrow_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="15dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="5dp"
+                android:layout_margin="7dp"
+                android:background="#fff"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:id="@+id/shareIcon"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="7dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/share_icon"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/shareIcon"/>
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="17dp"
+                    android:contentDescription="arrow"
+                    android:src="@drawable/forward_arrow_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="15dp"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@drawable/default_profile_image"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="30dp"
+                android:visibility="visible"
+                android:contentDescription="TODO" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

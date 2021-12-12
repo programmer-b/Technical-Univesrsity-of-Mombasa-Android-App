@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginTop="21dp"
+    android:layout_marginBottom="21dp"
+    android:layout_marginStart="11dp"
+    android:layout_marginEnd="11dp"
+    android:padding="10dp"
+    android:background="@drawable/news_bg"
+    android:backgroundTint="#eee"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/memo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="7dp"
+        android:textStyle="bold"
+        android:background="#fff"
+        android:elevation="5dp"
+        android:text="This is the memo"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/memo"
+        android:background="@drawable/news_bg"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:minHeight="20dp"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="monospace"
+            android:text="3rd,November,2021"
+            android:textStyle="bold"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

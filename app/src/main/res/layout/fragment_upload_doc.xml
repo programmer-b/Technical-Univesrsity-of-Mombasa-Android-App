@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".upload_doc">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:animateLayoutChanges="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="35dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back_icon"
+                android:layout_centerVertical="true"
+                android:contentDescription="backIcon"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@drawable/header_background"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_toEndOf="@+id/back_button"
+                app:title="Upload document"
+                app:titleTextColor="#fff"
+                app:layout_constraintTop_toTopOf="parent"
+                android:animateLayoutChanges="true" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        layout="@layout/upload_doc"/>
+
+</RelativeLayout>

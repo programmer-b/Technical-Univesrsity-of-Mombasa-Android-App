@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TUM</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="todo">TODO</string>
+    <string name="title_activity_map">Map</string>
+    <string name="notification_channel_id">default</string>
+    <string name="title_activity_maps">Maps</string>
+</resources>
