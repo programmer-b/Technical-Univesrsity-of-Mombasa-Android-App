@@ -1,11 +1,14 @@
 package com.tum.app;
 
+import static android.widget.Toast.makeText;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,9 +90,6 @@ public class HomeFragment extends Fragment {
             // TODO: Rename and change types of parameters
             String mParam1 = getArguments().getString(ARG_PARAM1);
             String mParam2 = getArguments().getString(ARG_PARAM2);
-
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
         }
     }
 
@@ -195,22 +195,24 @@ public class HomeFragment extends Fragment {
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
         view.findViewById(R.id.layout_Eregister).setOnClickListener(view1 -> {
-            if (AndroidUtils.isInternetAvailable(context)) {
+            if (AndroidUtils.isOnline(context)) {
                 Intent intent = new Intent(requireContext(),Browser.class);
                 editor.putString("title","Eregister");
                 editor.putString("link","https://eregistrar.tum.ac.ke/Campuscura/?TenantID=tum#login;TenantID=tum;Apply=false");
                 editor.apply();
+                requireActivity().overridePendingTransition(0,0);
                 startActivity(intent);
             }
             else showNetError();
         });
 
         view.findViewById(R.id.layout_Elearning).setOnClickListener(view1 -> {
-            if (AndroidUtils.isInternetAvailable(context)) {
+            if (AndroidUtils.isOnline(context)) {
                 Intent intent = new Intent(requireContext(),Browser.class);
                 editor.putString("title","Elearning");
                 editor.putString("link","https://elearning.tum.ac.ke/login/index.php");
                 editor.apply();
+                requireActivity().overridePendingTransition(0,0);
                 startActivity(intent);
             }
             else showNetError();
@@ -229,10 +231,12 @@ public class HomeFragment extends Fragment {
         assert context != null;
 
         if (!AndroidUtils.isInternetAvailable(context)) viewDialog.showDialog(getActivity());
-        else viewDialog.showNoConnection(getActivity());
+        else toast("Please connect to the internet !");
     }
     private void toast(String message){
-        Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show();
+        Toast toast = Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER,0,0);
+        toast.show();
     }
 
     private void time(View view,String Time){

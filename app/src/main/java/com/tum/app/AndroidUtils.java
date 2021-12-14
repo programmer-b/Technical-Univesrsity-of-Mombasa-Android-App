@@ -127,6 +127,7 @@ public class AndroidUtils extends Application{
         }
     }
 
+
     public static boolean isOnline(Context context){
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);

@@ -463,11 +463,22 @@ public class Browser extends AppCompatActivity {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 if (!AndroidUtils.isOnline(getApplicationContext())) showNoConnection();
             }
+
+            @Override
+            public void onReceivedSslError(WebView view, final SslErrorHandler handler, SslError error){
+                final AlertDialog.Builder builder = new AlertDialog.Builder(Browser.this);
+                builder.setMessage(title);
+                builder.setTitle(R.string.app_name);
+                builder.setPositiveButton("Proceed", (dialogInterface, i) -> { handler.proceed();dialogInterface.dismiss();});
+                builder.setNegativeButton("Cancel", (dialogInterface, i) -> { dialogInterface.dismiss();handler.cancel();finish();});
+                final AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+
         });
         webView.setWebChromeClient(new GoogleClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
-        webView.clearSslPreferences();
         webView.getSettings().setSupportZoom(true);
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         webView.getSettings().getDefaultFontSize();
