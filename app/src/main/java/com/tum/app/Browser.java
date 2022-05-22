@@ -54,7 +54,7 @@ import java.util.Locale;
 import me.zhanghai.android.materialprogressbar.MaterialProgressBar;
 
 public class Browser extends AppCompatActivity {
-
+//This is the default tum browser
     ViewDialog dialog = new ViewDialog();
     private MaterialProgressBar progress;
     private RelativeLayout noConnection;

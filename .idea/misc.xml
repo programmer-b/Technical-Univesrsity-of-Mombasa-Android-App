@@ -21,11 +21,12 @@
         <entry key="app/src/main/res/layout/eduroam_layout.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_assignments.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_downloads_list.xml" value="0.1953125" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_memos.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_news_content.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_news_upload.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_news_view.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/fragment_notes.xml" value="0.3515625" />
         <entry key="app/src/main/res/layout/fragment_pdf_view.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_upload_doc.xml" value="0.1953125" />
